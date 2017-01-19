@@ -1,4 +1,1 @@
-Jangular is a Scrumlike card creator to help you track your progress and for me learn javascript.
-Currenlty the user can Create, Update, Delete, and Edit both lists and the cards those lists are on.
-
-
+Jangular ScrumLike card creator/editor to help plan, orgianize and complete projects.  This application has a ton of features including:  CRUD for both card creation and items within cards, Sorting and Filter list items on the cards as well as Move them from card to card.  The Move item feature is important because it allows you to track progress of any given list item.  
