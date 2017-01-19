@@ -1,1 +1,1 @@
-web: gunicorn djangular.wsgi --log-file -
+web: gunicorn djangula wsgi --log-file -
