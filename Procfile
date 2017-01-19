@@ -1,1 +1,1 @@
-web: gunicorn djangula wsgi --log-file -
+web: gunicorn wsgi.py --log-file -
