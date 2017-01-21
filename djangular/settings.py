@@ -21,7 +21,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'staticfiles'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -32,6 +31,7 @@ INSTALLED_APPS = [
     'scrumboard',
     'auth_api',
     'storages',
+    'boto',
 
 ]
 
@@ -119,24 +119,23 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
+    os.path.join(PROJECT_ROOT, 'static'),)
 
 
-  AWS_STORAGE_BUCKET_NAME = 'djangularjsfiles'
-    AWS_ACCESS_KEY_ID = 'AKIAJA2PPHVCDPW3JHHQ'
-    AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'djangularjsfiles'
+AWS_ACCESS_KEY_ID = 'AKIAJA2PPHVCDPW3JHHQ'
+AWS_SECRET_ACCESS_KEY = '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'
 
     # Tell django-storages that when coming up with the URL for an item in S3 storage, keep
     # it simple - just use this domain plus the path. (If this isn't set, things get complicated).
     # This controls how the `static` template tag from `staticfiles` gets expanded, if you're using it.
     # We also use it in the next setting.
-    AWS_S3_CUSTOM_DOMAIN = 'http://djangularjsfiles.s3-website-us-east-1.amazonaws.com/
+AWS_S3_CUSTOM_DOMAIN = 'http://djangularjsfiles.s3-website-us-east-1.amazonaws.com/'
 
     # This is used by the `static` template tag from `static`, if you're using that. Or if anything else
     # refers directly to STATIC_URL. So it's safest to always set it.
-    STATIC_URL = "https://http://djangularjsfiles.s3-website-us-east-1.amazonaws.com/"
+STATIC_URL = "https://http://djangularjsfiles.s3-website-us-east-1.amazonaws.com/"
 
     # Tell the staticfiles app to use S3Boto storage when writing the collected static files (when
     # you run `collectstatic`).
-    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
