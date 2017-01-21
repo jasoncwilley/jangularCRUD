@@ -2,7 +2,7 @@
 
     <head>
         <link rel="stylesheet" type="text/css"
-              href="{% static "scrumboard/css/scrumboard.css" %}" >
+              href= "{ % "static scrumboard/css/scrumboard.css" %}" >
     </head>
     <body ng-app="scrumboard.demo">
         {% verbatim %}
@@ -26,8 +26,8 @@
         {% endverbatim %}
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-        <script src="{% static "scrumboard/scrumboard.js" %}"></script>
-        <script src="{% static "scrumboard/card.directive.js" %}"></script>
-        <script src="{% static "scrumboard/scrumboard.config.js" %}"></script>
+        <link href="{% static "js/scrumboard.js" %}"></link>
+        <link href="{% static "js/card.directive.js" %}"></link>
+        <link href="{% static "js/scrumboard.config.js" %}"></link>
         
   
